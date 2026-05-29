@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=ZCOOL+KuaiLe&display=swap');
+
+:root {
+  font: 18px/1.45 'Baloo 2', 'Noto Sans SC', sans-serif;
+  letter-spacing: 0.18px;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'ZCOOL KuaiLe', 'Baloo 2', sans-serif;
+}
+
+p,
+a,
+button,
+input,
+span,
+label,
+li,
+div {
+  font-family: 'Baloo 2', 'Noto Sans SC', sans-serif;
+}
+
+a {
+  color: inherit;
+}

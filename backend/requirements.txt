@@ -1,0 +1,17 @@
+# Core (always needed)
+fastapi
+uvicorn[standard]
+numpy==1.26.4
+joblib
+scikit-learn
+pandas
+xgboost
+openai
+sqlalchemy>=2.0
+psycopg2-binary
+alembic
+
+# Optional: server-side MediaPipe + image decode (only for legacy /vision/gestures endpoint)
+# Uncomment if you need the old base64-image gesture endpoint:
+# mediapipe==0.10.21
+# opencv-python-headless

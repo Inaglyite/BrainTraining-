@@ -1,0 +1,20 @@
+[Unit]
+Description=BrainTraining Backend (FastAPI + Frontend)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=inaglyite
+Group=inaglyite
+WorkingDirectory=/home/inaglyite/MyProjects/BrainTraining/backend
+Environment="PATH=/home/inaglyite/MyProjects/BrainTraining/backend/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/home/inaglyite/MyProjects/BrainTraining/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8443 --ssl-keyfile /home/inaglyite/MyProjects/BrainTraining/.cert/lan-key.pem --ssl-certfile /home/inaglyite/MyProjects/BrainTraining/.cert/lan-cert.pem
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=braintraining
+
+[Install]
+WantedBy=multi-user.target
